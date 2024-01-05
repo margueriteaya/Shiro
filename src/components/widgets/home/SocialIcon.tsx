@@ -7,6 +7,8 @@ import { NeteaseCloudMusicIcon } from '~/components/icons/platform/NeteaseIcon'
 import { XIcon } from '~/components/icons/platform/XIcon'
 import { MotionButtonBase } from '~/components/ui/button'
 import { FloatPopover } from '~/components/ui/float-popover'
+import { PixivIcon } from '~/components/icons/platform/PixivIcon'
+import { LastfmIcon } from '~/components/icons/platform/LastfmIcon'
 
 interface SocialIconProps {
   type: string
@@ -23,12 +25,14 @@ const type2Copy = {
   feed: 'RSS',
   bilibili: '哔哩哔哩',
   netease: '网易云音乐',
+  lastfm: 'Last.FM',
+  pixiv: 'Pixiv',
 
   qq: 'QQ',
   wechat: '微信',
   weibo: '微博',
 
-  x: 'X',
+  x: '被马斯克强奸的Twitter',
 } as any
 const icons = new Set(Object.keys(type2Copy))
 
@@ -47,6 +51,18 @@ const iconSet: Record<
     <i className="icon-[mingcute--twitter-line]" />,
     '#1DA1F2',
     (id) => `https://twitter.com/${id}`,
+  ],
+  lastfm: [
+    'Last.FM',
+    <LastfmIcon />,
+    '#C3000D',
+    (id) => `https://last.fm/user/${id}`,
+  ],
+  pixiv: [
+    'Pixiv',
+    <PixivIcon />,
+    '#1F97Fd',
+    (id) => `https://pixiv.net/users/${id}`,
   ],
   x: ['x', <XIcon />, 'rgba(36,46,54,1.00)', (id) => `https://x.com/${id}`],
   telegram: [

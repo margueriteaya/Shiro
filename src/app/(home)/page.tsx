@@ -203,7 +203,7 @@ const Welcome = () => {
           )}
         >
           <small>
-            当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。
+          我以为一片废土确实没什么好看的。
           </small>
           <span className="mt-8 animate-bounce">
             <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
@@ -231,9 +231,9 @@ const PostScreen = () => {
           transition={softSpringPreset}
           className="text-3xl font-medium leading-loose"
         >
-          这里或许有那么一些对于生活的感慨
+          有在写文章吗？
           <br />
-          也或许有那么一些对于技术的记录。
+          果然就那么一点，我们ADHD是这样的。
         </m.h2>
         <div>
           <ul className="space-y-4">
@@ -308,7 +308,7 @@ const PostScreen = () => {
                 className="shiro-link--underline"
                 href={routeBuilder(Routes.Posts, {})}
               >
-                还有更多，要不要看看？
+                你不会真的觉得还有能看的吧？
               </Link>
             </MotionButtonBase>
           </m.div>
@@ -338,7 +338,7 @@ const NoteScreen = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={softBouncePreset}
             >
-              看看我的近况，我的所思所想、所作所为
+              笔记？不写，懒得动。
             </m.h3>
             <Link href={routeBuilder(Routes.Note, { id: theLast.nid })}>
               <m.div
@@ -444,7 +444,7 @@ const NoteScreen = () => {
                     className="shiro-link--underline"
                     href={routeBuilder(Routes.Posts, {})}
                   >
-                    还有更多，要不要看看？
+                    你不会真的觉得还有能看的吧？
                   </Link>
                 </MotionButtonBase>
               </m.div>
@@ -458,9 +458,9 @@ const NoteScreen = () => {
             opacity: 1,
           }}
         >
-          而在这里，你会看到一个不同的我，
+          我是谁？
           <br />
-          一个在生活中发现美，感受痛苦，洞察人性的我。
+          我在哪里？我在干什么？
         </m.h2>
       </TwoColumnLayout>
     </Screen>
@@ -489,7 +489,7 @@ const FriendScreen = () => {
     <Screen className="flex h-auto min-h-[100vh] center">
       <div className="flex min-w-0 flex-col">
         <BottomToUpTransitionView className="text-center text-3xl font-medium">
-          这些是我珍视的人，他们陪伴我走过人生的每一段旅程。
+        目前看这里的话我还是挺孤独的。
         </BottomToUpTransitionView>
         <ul
           className={clsx(
@@ -542,7 +542,7 @@ const FriendScreen = () => {
               className="shiro-link--underline"
               href={routeBuilder(Routes.Friends, {})}
             >
-              还有更多，要不要看看？
+              你不会真的觉得还有能看的吧？
             </Link>
           </MotionButtonBase>
         </BottomToUpTransitionView>

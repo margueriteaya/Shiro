@@ -116,10 +116,15 @@ export const CommentBoxActionBar: Component = ({ className }) => {
         )}
       >
         <span className="hidden md:inline">
-          支持 <b>Markdown</b> 与{' '}
+        支持 <b>Markdown</b> 与{' '}
           <MLink href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
             GFM
           </MLink>
+          ，评论前请参阅{' '}
+          <MLink href="/privacy-policy">
+            隐私权政策
+          </MLink>
+          。
         </span>
         <CommentBoxSlotProvider />
       </span>
@@ -251,7 +256,7 @@ const SubmitButton = () => {
       afterSubmit?.()
 
       const toastCopy = isLogged
-        ? '发表成功啦~'
+        ? '发表成功'
         : isReply
           ? '感谢你的回复！'
           : '感谢你的评论！'
