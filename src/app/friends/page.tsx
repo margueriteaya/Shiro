@@ -318,7 +318,8 @@ const FormModal = () => {
       placeholder: '网站 * https://',
       rules: [
         {
-          validator: isHttpsUrl,
+        //  validator: isHttpsUrl,
+        validator: (value: string) => !!value,
           message: '请输入正确的网站链接 https://',
         },
       ],
