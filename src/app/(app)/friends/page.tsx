@@ -79,7 +79,7 @@ export default function Page() {
     <div>
       <header className="prose prose-p:my-2">
         <h1>朋友们</h1>
-        <h3>価値は命に従って付いてる</h3>
+        <h3>海内存知己，天涯若比邻</h3>
       </header>
 
       <main className="mt-10 flex w-full flex-col">
@@ -271,10 +271,11 @@ const ApplyLinkInfo: FC = () => {
       <div className="prose mt-20">
         <Markdown>
           {[
-            `**申请友链前必读**`,
             `- 您有权利在申请友链后不在您的友链页追加本站，是朋友比什么都重要。`,
             `- 确保您的网站不存在歧视女性、性小众群体、顺直本位与男本位主义、汉本位主义、亲中东与亲建制派内容。`,
             `- 为了您的安全着想，禁止任何有中国ICP备案或有申请ICP备案计划的网站申请友链。`,
+            `- 若您无法提供HTTPS的超链接，添加站点会出现问题。这种限制并不在我的意愿之内，但我无法解决。`,
+            `- 为了保证纯鼠空间的纯洁性，不允许养殖系流量僵尸网站申请友链。并且，出售域名用作商业用途将被清除。`,
           ].join('\n\n')}
         </Markdown>
         <Markdown className="[&_p]:!my-1">
@@ -301,7 +302,7 @@ const ApplyLinkInfo: FC = () => {
           })
         }}
       >
-        握手
+        握手！
       </StyledButton>
     </>
   )
@@ -398,7 +399,7 @@ const FormModal = () => {
         .applyLink({ ...(currentValues as any) })
         .then(() => {
           dismissTop()
-          toast.success('葛屁老师说了一声：好呗')
+          toast.success('好了')
         })
         .catch((err) => {
           if (err instanceof RequestError)
@@ -422,7 +423,7 @@ const FormModal = () => {
       ))}
 
       <StyledButton variant="primary" type="submit">
-        好耶！
+        好呗
       </StyledButton>
     </Form>
   )
