@@ -80,7 +80,7 @@ const SummaryContainer: Component<{
     >
       <div className="flex items-center">
         <LogosOpenaiIcon className="mr-2" />
-        AI 生成的摘要
+        AI 生成的低水准摘要
       </div>
 
       <AutoResizeHeight duration={0.3}>

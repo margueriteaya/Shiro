@@ -40,7 +40,7 @@ export const XLogSummary: FC<XLogSummaryProps> = (props) => {
     >
       <div className="flex items-center">
         <i className="icon-[mingcute--sparkles-line] mr-2 text-lg" />
-        AI 生成的摘要
+        AI 生成的低水准摘要
       </div>
 
       <AutoResizeHeight duration={0.3}>
