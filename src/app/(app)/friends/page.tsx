@@ -79,7 +79,7 @@ export default function Page() {
     <div>
       <header className="prose prose-p:my-2">
         <h1>朋友们</h1>
-        <h3>海内存知己，天涯若比邻</h3>
+        <h3>価値は命に従って付いてる</h3>
       </header>
 
       <main className="mt-10 flex w-full flex-col">
@@ -271,12 +271,10 @@ const ApplyLinkInfo: FC = () => {
       <div className="prose mt-20">
         <Markdown>
           {[
-            `- 申请友链前请**务必确保**贵站有我站的友链，若审批通过后移除本站链接，本站也将移除友链，并加入黑名单。`,
-            `- 若站点长时间无法访问，我会删除您的友链，恢复后可再次申请。`,
-            `- 确保您的网站不存在政治敏感问题及违法内容。没有过多的广告、无恶意软件、脚本。且转载文章须注明出处。`,
-            `- 确保站点全局启用 HTTPS`,
-            `- 您需要有自己的独立域名，暂且不同意公有子域名或免费域名的友链申请 (如 github.io, vercel.app, eu.org, js.cool, .tk, .ml, .cf 等)`,
-            `- 暂时不同意商业及非个人的网站的友链申请`,
+            `**申请友链前必读**`,
+            `- 您有权利在申请友链后不在您的友链页追加本站，是朋友比什么都重要。`,
+            `- 确保您的网站不存在歧视女性、性小众群体、顺直本位与男本位主义、汉本位主义、亲中东与亲建制派内容。`,
+            `- 为了您的安全着想，禁止任何有中国ICP备案或有申请ICP备案计划的网站申请友链。`,
           ].join('\n\n')}
         </Markdown>
         <Markdown className="[&_p]:!my-1">
@@ -297,13 +295,13 @@ const ApplyLinkInfo: FC = () => {
         className="mt-5"
         onClick={() => {
           present({
-            title: '我想和你交朋友！',
+            title: 'Be water',
 
             content: () => <FormModal />,
           })
         }}
       >
-        和我做朋友吧！
+        握手
       </StyledButton>
     </>
   )
@@ -400,7 +398,7 @@ const FormModal = () => {
         .applyLink({ ...(currentValues as any) })
         .then(() => {
           dismissTop()
-          toast.success('好耶！')
+          toast.success('葛屁老师说了一声：好呗')
         })
         .catch((err) => {
           if (err instanceof RequestError)

@@ -172,7 +172,7 @@ export default function TimelinePage() {
 
   const subtitle = `共有 ${
     sortedArr.flat(2).filter((i) => typeof i === 'object').length
-  } 篇文章，${!memory ? '再接再厉' : '回顾一下从前吧'}`
+  } 篇文章，${!memory ? '别往前走' : '别回头看'}`
 
   return (
     <NormalContainer>
@@ -184,7 +184,7 @@ export default function TimelinePage() {
           <>
             <Divider className="my-8 w-[80px]" />
             <TimelineProgress />
-            <p>活在当下，珍惜眼下</p>
+            <p>逃离时代才是要紧事。</p>
           </>
         )}
       </header>

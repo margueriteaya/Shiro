@@ -187,7 +187,7 @@ const Hero = () => {
           )}
         >
           <small className="text-center">
-            当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。
+           我以为一片废土确实没什么好看的。
           </small>
           <span className="mt-8 animate-bounce">
             <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
@@ -216,47 +216,37 @@ const ActivityScreen = () => {
 
 const windsock = [
   {
-    title: '文稿',
+    title: 'Posts',
     path: '/posts',
     type: 'Post',
     subMenu: [],
     icon: IcTwotoneSignpost,
   },
   {
-    title: '手记',
+    title: 'Notes',
     type: 'Note',
     path: '/notes',
     icon: FaSolidFeatherAlt,
   },
   {
-    title: '度过的时光呀',
+    title: 'Timeline',
     icon: FaSolidHistory,
     path: '/timeline',
   },
   {
-    title: '朋友们',
+    title: 'Friends',
     icon: FaSolidUserFriends,
     path: '/friends',
   },
   {
-    title: '写下一点思考',
+    title: 'Thinking',
     icon: MdiLightbulbOn20,
     path: '/thinking',
   },
   {
-    title: '看看我做些啥',
-    icon: MdiFlask,
-    path: '/projects',
-  },
-  {
-    title: '记录下一言',
+    title: 'Hitokotos',
     path: '/says',
     icon: FaSolidComments,
-  },
-  {
-    title: '跃迁',
-    icon: RMixPlanet,
-    path: 'https://travel.moe/go.html',
   },
 ]
 
@@ -274,8 +264,8 @@ const Windsock = () => {
   return (
     <>
       <div className="mt-28 flex flex-col center">
-        <div className="my-5 text-2xl font-medium">风向标</div>
-        <div className="mb-24 opacity-90">去到别去看看？</div>
+        <div className="my-5 text-2xl font-medium">排成了一排</div>
+        <div className="mb-24 opacity-90">感觉也没多大必要</div>
         <ul className="flex flex-col flex-wrap gap-2 gap-y-8 opacity-80 lg:flex-row">
           {windsock.map((item, index) => {
             return (
@@ -369,7 +359,7 @@ const Windsock = () => {
             presentSubscribe()
           }}
         >
-          订阅
+          别订阅，邮箱没做。
           <i className="icon-[material-symbols--notifications-active]" />
         </StyledButton>
       </div>

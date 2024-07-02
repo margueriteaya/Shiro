@@ -26,8 +26,8 @@ export default definePrerenderPage<{ slug: string }>()({
 
           <h3 className="font-light">
             {children.length
-              ? `当前共有 ${children.length} 篇文章，加油！`
-              : `这里还有没有内容呢，再接再厉！`}
+              ? `当前共有 ${children.length} 篇文章，不想写就别写了。`
+              : `这里还有没有内容，哈哈。`}
           </h3>
         </header>
 
