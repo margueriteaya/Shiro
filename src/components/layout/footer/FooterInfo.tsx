@@ -134,7 +134,7 @@ const PoweredBy: Component = ({ className }) => {
         >
           Shiro
         </StyledLink>{' '}
-        的开源版本。
+        的开源版本。并已惨遭魔改适正用语以尽情宣泄不健全。
         {process.env.COMMIT_HASH && process.env.COMMIT_URL && (
           <MLink popper={false} href={process.env.COMMIT_URL}>
             版本哈希：{process.env.COMMIT_HASH.slice(0, 8)}

@@ -79,7 +79,7 @@ export default function Page() {
     <div>
       <header className="prose prose-p:my-2">
         <h1>朋友们</h1>
-        <h3>海内存知己，天涯若比邻</h3>
+        <h3>価値は命に従って付いてる</h3>
       </header>
 
       <main className="mt-10 flex w-full flex-col">
