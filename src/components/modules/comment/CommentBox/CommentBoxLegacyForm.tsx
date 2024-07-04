@@ -21,7 +21,7 @@ const taClassName =
 type FormKey = 'author' | 'mail' | 'url'
 const placeholderMap = {
   author: '昵稱',
-  mail: '',郵件
+  mail: '郵件',
   url: 'URL',
 } as const
 
