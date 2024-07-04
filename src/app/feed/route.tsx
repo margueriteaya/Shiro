@@ -64,7 +64,7 @@ export async function GET() {
     description,
     site_url: url,
     feed_url: `${url}/feed`,
-    language: 'zh-CN',
+    language: 'zh-TW',
     image_url: `${url}/og`,
     generator: 'Shiro (https://github.com/Innei/Shiro)',
     pubDate: now.toUTCString(),

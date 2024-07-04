@@ -131,7 +131,7 @@ export default async function RootLayout(props: PropsWithChildren) {
 
   if (data instanceof PreRenderError) {
     return (
-      <html lang="zh-CN" className="noise themed" suppressHydrationWarning>
+      <html lang="zh-TW" className="noise themed" suppressHydrationWarning>
         <head>
           <PublicEnvScript />
 
@@ -156,7 +156,7 @@ export default async function RootLayout(props: PropsWithChildren) {
   return (
     <ClerkProvider publishableKey={env('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY')}>
       <AppFeatureProvider tmdb={!!process.env.TMDB_API_KEY}>
-        <html lang="zh-CN" className="noise themed" suppressHydrationWarning>
+        <html lang="zh-TW" className="noise themed" suppressHydrationWarning>
           <head>
             <PublicEnvScript />
             <Global />

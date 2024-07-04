@@ -461,7 +461,7 @@ const fetchTheMovieDBData: FetchObject = {
     setCardInfo({
       classNames: { cardRoot: '!w-full' },
     })
-    const json = await fetch(`/api/tmdb/${type}/${realId}?language=zh-CN`)
+    const json = await fetch(`/api/tmdb/${type}/${realId}?language=zh-TW`)
       .then((r) => r.json())
       .catch((err) => {
         console.error('Error fetching TMDB data:', err)

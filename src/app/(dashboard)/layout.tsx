@@ -44,7 +44,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   const themeConfig = data.theme
 
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang="zh-TW" suppressHydrationWarning>
       <head>
         <title>Shiro · Light Dashboard | Powered by Mix Space</title>
         <HydrationEndDetector />

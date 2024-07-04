@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
-import 'dayjs/locale/zh-cn'
+import 'dayjs/locale/zh-tw'
 
 export const init = () => {
-  dayjs.locale('zh-cn')
+  dayjs.locale('zh-tw')
 }

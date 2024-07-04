@@ -39,7 +39,7 @@ export const NoteHideIfSecret: Component = ({ children }) => {
 
   if (isSecret) {
     const dateFormat = noteSecret
-      ? Intl.DateTimeFormat('zh-cn', {
+      ? Intl.DateTimeFormat('zh-tw', {
           hour12: false,
           hour: 'numeric',
           minute: 'numeric',

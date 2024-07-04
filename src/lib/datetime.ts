@@ -1,13 +1,13 @@
 import dayjs from 'dayjs'
 
-import 'dayjs/locale/zh-cn'
+import 'dayjs/locale/zh-tw'
 
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 
 dayjs.extend(customParseFormat)
 dayjs.extend(LocalizedFormat)
-dayjs.locale('zh-cn')
+dayjs.locale('zh-tw')
 
 export enum DateFormat {
   'MMM DD YYYY',
