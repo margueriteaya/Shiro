@@ -62,7 +62,7 @@ export const ImportMarkdownButton: FC<{
   return (
     <>
       <StyledButton className="rounded-lg" variant="secondary" onClick={onOpen}>
-        导入
+        導入
       </StyledButton>
       <DeclarativeModal
         clickOutsideToDismiss={false}

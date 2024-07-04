@@ -29,7 +29,7 @@ export class CrossBellConnector {
     await contract.walletClient.requestAddresses()
 
     if (!contract.account.address) {
-      throw new Error('未连接到 metamask')
+      throw new Error('Metamask 未連線')
     }
     this.contract = contract
     return contract
@@ -60,10 +60,10 @@ export class CrossBellConnector {
         const { text, title } = data
         postCallOnce = true
 
-        // FIXME 如果 xLog 不存在这个 pageId，会报错 metamask rpc error
-        // 如果是在 xLog 删除了这个文章，但是 mx 这边没有同步，会导致这个问题
-        // 这里还是验证一下吧，只针对 note 的场景，post 还是根据记录的 pageId 来，因为 post 的 slug 不是固定的但是 note 的 nid 是固定的。
-        // 如果 post 的 slug 改了，那么就在 xlog 拿不到 pageId 了，这个时候就会出问题（修改文章都是变成新增）
+        // FIXME 如果 xLog 不存在這個 pageId，會報錯 metamask rpc error
+        // 如果是在 xLog 刪除了這個文章，但是 mx 這邊沒有同步，會導致這個問題
+        // 這裡還是驗證一下吧，只針對 note 的場景，post 還是根據記錄的 pageId 來，因為 post 的 slug 不是固定的但是 note 的 nid 是固定的。
+        // 如果 post 的 slug 改了，那麼就在 xlog 拿不到 pageId 了，這個時候就會出問題（修改文章都是變成新增）
 
         if (!pageId || this.isNoteModel(data))
           pageId = await this.getCrossbellNotePageIdBySlug(slug)
@@ -77,15 +77,15 @@ export class CrossBellConnector {
           .catch(() => '')
 
         if (!articleUrl) {
-          throw new Error('文章链接生成失败')
+          throw new Error('文章連結生成失敗')
         }
 
         const contentWithFooter = `${text}
 
 <span style="text-align: right;font-size: 0.8em; float: right">此文由 [Mix Space](https://github.com/mx-space) 同步更新至 xLog
-原始链接为 <${articleUrl}></span><br ><br >`
+原始連結為 <${articleUrl}></span><br ><br >`
 
-        toast.info('正在发布到 xLog...')
+        toast.info('正在PO到 xLog...')
 
         const input = {
           siteId: SITE_ID,
@@ -101,7 +101,7 @@ export class CrossBellConnector {
             'tags' in data
               ? data.tags.toString()
               : this.isNoteModel(data)
-                ? '手记'
+                ? '手記'
                 : '',
           publishedAt: data.created,
         }
@@ -149,12 +149,12 @@ export class CrossBellConnector {
 
       await post().catch((err) => {
         console.error(err)
-        toast.error('xLog 发布失败')
+        toast.error('xLog PO失敗')
 
         throw err
       })
 
-      toast.success('xLog 发布成功')
+      toast.success('xLog PO成功')
 
       let nextPageId = pageId
       if (!nextPageId) {
@@ -162,7 +162,7 @@ export class CrossBellConnector {
       }
 
       if (!nextPageId) {
-        toast.error('无法获取 Crossbell Note pageId 任务终止')
+        toast.error('無法擷取 Crossbell Note pageId 任務終止')
         return
       }
       // update meta for pageId
@@ -174,7 +174,7 @@ export class CrossBellConnector {
         nextPageId.split('-')[1],
       )
       if (!crossbellNoteData) {
-        toast.error('无法获取 Crossbell Note 任务终止')
+        toast.error('無法擷取 Crossbell Note 任務終止')
         return
       }
       const {

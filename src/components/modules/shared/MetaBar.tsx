@@ -23,11 +23,11 @@ export const CurrentReadingCountingMetaBarItem: FC<{
         type="tooltip"
         triggerElement={
           <span>
-            当前<span className="mx-1 font-medium">{count}</span>人正在阅读
+            當前<span className="mx-1 font-medium">{count}</span>人正在閱覽
           </span>
         }
       >
-        当前的实时阅读人数，可以通过左侧时间线查看其他人的阅读进度（手机上无法查看）
+        當前線上的閱覽人數，可以透過左側時間線檢視其他人的閱覽進度（行動裝置上無法檢視）
       </FloatPopover>
     </>
   )

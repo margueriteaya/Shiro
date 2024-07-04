@@ -17,9 +17,9 @@ export const IpInfoPopover: Component<IpInfoPopoverProps> = (props) => {
           .filter(Boolean)
           .join(' - ') || 'N/A'
       }<br />
-      ISP: ${info.ispDomain || 'N/A'}<br />
-      组织：${info.ownerDomain || 'N/A'}<br />
-      范围：${info.range ? Object.values(info.range).join(' - ') : 'N/A'}
+      電信業者: ${info.ispDomain || 'N/A'}<br />
+      組織：${info.ownerDomain || 'N/A'}<br />
+      區域：${info.range ? Object.values(info.range).join(' - ') : 'N/A'}
       `)
   }
 

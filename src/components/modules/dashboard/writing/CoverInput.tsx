@@ -41,7 +41,7 @@ export const CoverInput: FC<{
               return
             }
             if (!isUrl(value)) {
-              toast.error('只能粘贴一个图片链接')
+              toast.error('只能貼上一個圖片連結')
               return
             }
             setMeta({

@@ -31,38 +31,38 @@ export const PostCopyright: FC = () => {
       className="mt-4 text-sm leading-loose text-gray-600 dark:text-neutral-400"
       id="copyright"
     >
-      <p>文章标题：{title}</p>
+      <p>文章標題：{title}</p>
       <p>文章作者：{name}</p>
       <p>
-        文章链接：<span>{link}</span>{' '}
+        文章連結：<span>{link}</span>{' '}
         <a
           onClick={() => {
             navigator.clipboard.writeText(link)
-            toast.success('已复制文章链接')
+            toast.success('已複製文章連結')
           }}
           data-hide-print
           className="cursor-pointer select-none"
         >
-          [复制]
+          [複製]
         </a>
       </p>
       <p>
-        最后修改时间:{' '}
-        {date ? dayjs(date).format('YYYY 年 MM 月 DD 日 H:mm') : '暂没有修改过'}
+        最後變更時間:{' '}
+        {date ? dayjs(date).format('YYYY 年 MM 月 DD 日 H:mm') : '暫冇有修改過'}
       </p>
       <Divider />
       <div>
         <p>
-          商业转载请联系站长获得授权，非商业转载请注明本文出处及文章链接，您可以自由地在任何媒体以任何形式复制和分发作品，也可以修改和创作，但是分发衍生作品时必须采用相同的许可协议。
+          商業轉載請獲取授權，非商業轉載請註明本文出處及文章連結，您可以自由地在任何媒介以任何格式散布作品，也可以修改和創作，但是分發二次作品時必須採用相同的許可協定。
           <br />
-          本文采用
+          本文採用
           <a
             className="shiro-link--underline"
             href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           >
-            CC BY-NC-SA 4.0 - 非商业性使用 - 相同方式共享 4.0 国际
+            CC BY-NC-SA 4.0 - 姓名標示-非商業性-相同方式分享 4.0 國際
           </a>
-          进行许可。
+          進行許可。
         </p>
       </div>
     </section>

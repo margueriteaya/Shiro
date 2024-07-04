@@ -112,10 +112,10 @@ export const WithArticleSelectionAction: Component<{
                   onClick={() => {
                     navigator.clipboard.writeText(selectedText)
                     setShow(false)
-                    toast.success('已复制到剪贴板')
+                    toast.success('已複製')
                   }}
                 >
-                  复制
+                  複製
                 </MotionButtonBase>
                 <DividerVertical className="mx-1" />
               </>
@@ -126,7 +126,7 @@ export const WithArticleSelectionAction: Component<{
                 className="rounded-md px-2 py-1 hover:bg-slate-100/80 dark:hover:bg-zinc-900/90"
                 onClick={() => {
                   present({
-                    title: '评论',
+                    title: '留言',
 
                     content: (rest) => (
                       <CommentModal

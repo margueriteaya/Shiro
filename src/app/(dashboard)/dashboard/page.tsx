@@ -13,7 +13,7 @@ import { apiClient } from '~/lib/request'
 export default function Page() {
   return (
     <div className="mx-auto w-full max-w-[1500px] p-4">
-      <h1 className="text-3xl font-light">欢迎回来</h1>
+      <h1 className="text-3xl font-light">歡迎回來</h1>
 
       <div className="mt-8 flex flex-col gap-4 lg:grid lg:grid-cols-2">
         <div>
@@ -22,7 +22,7 @@ export default function Page() {
           <Hitokoto />
         </div>
         <div>
-          <h3 className="my-[10px] font-light text-opacity-80">今日诗句</h3>
+          <h3 className="my-[10px] font-light text-opacity-80">今日詩句</h3>
           <ShiJu />
         </div>
       </div>
@@ -46,15 +46,15 @@ const UserLoginStat = () => {
   if (!user) return null
   return (
     <div>
-      <h3 className="mb-4 text-xl font-light text-opacity-80">登录记录</h3>
+      <h3 className="mb-4 text-xl font-light text-opacity-80">登入記錄</h3>
       <p className="relative -mt-2 mb-3 text-gray-500">
         <span className="flex items-center">
-          <span>上次登录 IP: </span>
+          <span>上次登入 IP: </span>
           {user.lastLoginIp ? <IpInfoPopover ip={user.lastLoginIp} /> : 'N/A'}
         </span>
         <div className="pt-[.5rem]" />
         <span>
-          上次登录时间:{' '}
+          上次登入時間:{' '}
           {user.lastLoginTime ? (
             <time>
               {parseDate(user.lastLoginTime, 'YYYY 年 M 月 D 日 dddd')}

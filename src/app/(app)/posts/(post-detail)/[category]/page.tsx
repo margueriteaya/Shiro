@@ -14,7 +14,7 @@ export default definePrerenderPage<{
 
     return (
       <div>
-        正在重定向到 <pre>{`/posts${data.path}`}</pre>
+        正在移動至 <pre>{`/posts${data.path}`}</pre>
       </div>
     )
   },

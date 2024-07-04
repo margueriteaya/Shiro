@@ -26,7 +26,7 @@ export const Hitokoto = () => {
         creator: data.creator,
       }).filter(Boolean)[0]
       if (!data.hitokoto) {
-        return '没有获取到句子信息'
+        return '未擷取到Hitokoto資訊'
       } else {
         return data.hitokoto + (postfix ? ` —— ${postfix}` : '')
       }
@@ -46,7 +46,7 @@ export const Hitokoto = () => {
         <MotionButtonBase
           onClick={() => {
             navigator.clipboard.writeText(hitokoto)
-            toast.success('已复制')
+            toast.success('已複製')
             toast.info(hitokoto)
           }}
         >

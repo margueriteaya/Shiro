@@ -24,7 +24,7 @@ export const AsideCommentButton = (
       className="flex flex-col space-y-2"
       onClick={() => {
         present({
-          title: '评论',
+          title: '留言',
           content: (rest) => <CommentModal {...props} {...rest} />,
         })
       }}

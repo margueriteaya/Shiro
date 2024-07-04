@@ -187,7 +187,7 @@ const Hero = () => {
           )}
         >
           <small className="text-center">
-           我以为一片废土确实没什么好看的。
+           我以為一片廢土確實沒什麼好看的。
           </small>
           <span className="mt-8 animate-bounce">
             <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
@@ -265,7 +265,7 @@ const Windsock = () => {
     <>
       <div className="mt-28 flex flex-col center">
         <div className="my-5 text-2xl font-medium">排成了一排</div>
-        <div className="mb-24 opacity-90">感觉也没多大必要</div>
+        <div className="mb-24 opacity-90">感覺也沒多大必要</div>
         <ul className="flex flex-col flex-wrap gap-2 gap-y-8 opacity-80 lg:flex-row">
           {windsock.map((item, index) => {
             return (
@@ -326,7 +326,7 @@ const Windsock = () => {
                 })
               })
 
-            toast('谢谢你！', undefined, {
+            toast('謝謝你！', undefined, {
               iconElement: (
                 <m.i
                   className="icon-[mingcute--heart-fill] text-uk-red-light"
@@ -347,7 +347,7 @@ const Windsock = () => {
             })
           }}
         >
-          喜欢本站 <i className="icon-[mingcute--heart-fill]" />{' '}
+          喜歡本站 <i className="icon-[mingcute--heart-fill]" />{' '}
           <NumberSmoothTransition>
             {count as any as string}
           </NumberSmoothTransition>
@@ -359,7 +359,7 @@ const Windsock = () => {
             presentSubscribe()
           }}
         >
-          别订阅，邮箱没做。
+          別訂閱，信箱沒做。
           <i className="icon-[material-symbols--notifications-active]" />
         </StyledButton>
       </div>

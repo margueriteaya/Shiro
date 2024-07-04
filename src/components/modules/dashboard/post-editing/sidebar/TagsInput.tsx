@@ -25,7 +25,7 @@ export const TagsInput = () => {
   }
 
   return (
-    <SidebarSection label="标签">
+    <SidebarSection label="標籤">
       <div className="flex flex-wrap items-center gap-2">
         {tags?.map((tag) => (
           <PostTag canClose key={tag} onClose={() => handleClose(tag)}>

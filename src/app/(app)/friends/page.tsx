@@ -78,7 +78,7 @@ export default function Page() {
   return (
     <div>
       <header className="prose prose-p:my-2">
-        <h1>朋友们</h1>
+        <h1>朋友們</h1>
         <h3>価値は命に従って付いてる</h3>
       </header>
 
@@ -100,7 +100,7 @@ export default function Page() {
           <>
             <Collapse
               title={
-                <div className="mt-8 font-bold">以下站点无法访问，已失联</div>
+                <div className="mt-8 font-bold">以下站點無法訪問，已失聯</div>
               }
             >
               <OutdateSection data={outdated} />
@@ -111,7 +111,7 @@ export default function Page() {
           <>
             <Collapse
               title={
-                <div className="mt-8 font-bold">以下站点不合规，已被禁止</div>
+                <div className="mt-8 font-bold">以下站點不合規，已被禁止</div>
               }
             >
               <BannedSection data={banned} />
@@ -264,28 +264,28 @@ const ApplyLinkInfo: FC = () => {
   })
   const { present } = useModalStack()
   if (!canApply) {
-    return <NotSupport className="mt-20" text="主人禁止了申请友链。" />
+    return <NotSupport className="mt-20" text="主人禁止了申請友鏈。" />
   }
   return (
     <>
       <div className="prose mt-20">
         <Markdown>
           {[
-            `- 您有权利在申请友链后不在您的友链页追加本站，是朋友比什么都重要。`,
-            `- 确保您的网站不存在歧视女性、性小众群体、顺直本位与男本位主义、汉本位主义、亲中东与亲建制派内容。`,
-            `- 为了您的安全着想，禁止任何有中国ICP备案或有申请ICP备案计划的网站申请友链。`,
-            `- 若您无法提供HTTPS的超链接，添加站点会出现问题。这种限制并不在我的意愿之内，但我无法解决。`,
-            `- 为了保证纯鼠空间的纯洁性，不允许养殖系流量僵尸网站申请友链。并且，出售域名用作商业用途将被清除。`,
+            `- 您有權利在申請友鏈後不在您的友鏈頁追加本站，是朋友比什麼都重要。`,
+            `- 確保您的網站不存在歧視女性、性小衆群體、順直本位與男本位主義、漢本位主義、親中東與親建制派內容。`,
+            `- 為了您的安全著想，禁止任何有中國ICP備案或有申請ICP備案計畫的網站申請友鏈。`,
+            `- 若您無法提供HTTPS的連結，申請過程會出現問題。這種限制並不在我的意願之內，但我無法解決。`,
+            `- 為了保證純鼠空間的純潔性，不允許養殖系流量殭屍網站申請友鏈。並且，出售域名用作商業用途將被清除。`,
           ].join('\n\n')}
         </Markdown>
         <Markdown className="[&_p]:!my-1">
           {[
             '',
-            `**站点标题**: [${
+            `**站點標題**: [${
               seo.title
             }](${`${location.protocol}//${location.host}`})`,
-            `**站点描述**: ${seo.description}`,
-            `**主人头像**: [点击下载](${avatar})`,
+            `**站點描述**: ${seo.description}`,
+            `**主人頭像**: [下載](${avatar})`,
             `**主人名字**: ${name}`,
           ].join('\n\n')}
         </Markdown>
@@ -313,75 +313,75 @@ const FormModal = () => {
   const [inputs] = useState(() => [
     {
       name: 'author',
-      placeholder: '昵称 *',
+      placeholder: '昵稱 *',
       rules: [
         {
           validator: (value: string) => !!value,
-          message: '昵称不能为空',
+          message: '昵稱不能為空',
         },
         {
           validator: (value: string) => value.length <= 20,
-          message: '昵称不能超过20个字符',
+          message: '昵稱不能超過20個字符',
         },
       ],
     },
     {
       name: 'name',
-      placeholder: '站点标题 *',
+      placeholder: '站點標題 *',
       rules: [
         {
           validator: (value: string) => !!value,
-          message: '站点标题不能为空',
+          message: '站點標題不能為空',
         },
         {
           validator: (value: string) => value.length <= 20,
-          message: '站点标题不能超过20个字符',
+          message: '站點標題不能超過20個字符',
         },
       ],
     },
     {
       name: 'url',
-      placeholder: '网站 * https://',
+      placeholder: '網站 * https://',
       rules: [
         {
           validator: isHttpsUrl,
-          message: '请输入正确的网站链接 https://',
+          message: '請輸入正確的網站連結 https://',
         },
       ],
     },
     {
       name: 'avatar',
-      placeholder: '头像链接 * https://',
+      placeholder: '圖標連結 * https://',
       rules: [
         {
           validator: isHttpsUrl,
-          message: '请输入正确的头像链接 https://',
+          message: '請輸入正確的圖標連結 https://',
         },
       ],
     },
     {
       name: 'email',
-      placeholder: '留下你的邮箱哦 *',
+      placeholder: '留下你的信箱哦 *',
 
       rules: [
         {
           validator: isEmail,
-          message: '请输入正确的邮箱',
+          message: '請輸入正確的信箱',
         },
       ],
     },
     {
       name: 'description',
-      placeholder: '一句话描述一下自己吧 *',
+      placeholder: '一句話描述一下自己吧 *',
 
       rules: [
         {
           validator: (value: string) => !!value,
-          message: '一句话描述一下自己吧',
+          message: '一句話描述一下自己吧',
         },
         {
           validator: (value: string) => value.length <= 50,
-          message: '一句话描述不要超过50个字啦',
+          message: '一句話描述不要超過50個字啦',
         },
       ],
     },
@@ -423,7 +423,7 @@ const FormModal = () => {
       ))}
 
       <StyledButton variant="primary" type="submit">
-        好呗
+        好唄
       </StyledButton>
     </Form>
   )

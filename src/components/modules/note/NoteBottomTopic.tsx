@@ -31,7 +31,7 @@ export const NoteBottomTopic: FC = () => {
   return (
     <div data-hide-print>
       <div className="text-md">
-        <strong>文章被专栏收录：</strong>
+        <strong>文章被Channel收錄：</strong>
       </div>
       <Divider />
       <div className="flex items-center gap-4">
@@ -42,7 +42,7 @@ export const NoteBottomTopic: FC = () => {
           text={textToBigCharOrWord(name)}
           className="shrink-0"
           shadow={false}
-          alt={`专栏 ${name} 的头像`}
+          alt={`Channel ${name} 的圖標`}
         />
         <div className="flex grow flex-col self-start">
           <span className="text-md mb-2 font-medium">

@@ -19,11 +19,11 @@ export const DeleteConfirmButton: FC<
       className="rounded-lg"
       onClick={() => {
         onDelete().then(() => {
-          toast.success('删除成功')
+          toast.success('刪除成功')
         })
       }}
     >
-      确定
+      確定
     </StyledButton>
   )
 
@@ -33,7 +33,7 @@ export const DeleteConfirmButton: FC<
       type="tooltip"
       triggerElement={
         <MotionButtonBase className="duration-200 hover:text-red-500">
-          删除
+          刪除
         </MotionButtonBase>
       }
     >
@@ -41,8 +41,8 @@ export const DeleteConfirmButton: FC<
         <p className="text-center text-base font-bold text-error">
           {confirmText ??
             (deleteItemText
-              ? `确定删除「${deleteItemText}」吗？`
-              : '确定删除吗？')}
+              ? `確定刪除「${deleteItemText}」嗎？`
+              : '確定刪除嗎？')}
         </p>
       </div>
       <div className="text-right">{props.children || defaultButton}</div>

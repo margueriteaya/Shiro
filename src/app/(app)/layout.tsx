@@ -116,7 +116,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
     alternates: {
       canonical: url.webUrl,
       types: {
-        'application/rss+xml': [{ url: 'feed', title: 'RSS 订阅' }],
+        'application/rss+xml': [{ url: 'feed', title: 'RSS 訂閱' }],
       },
     },
   } satisfies Metadata
@@ -141,8 +141,8 @@ export default async function RootLayout(props: PropsWithChildren) {
           className={`${sansFont.variable} ${serifFont.variable} m-0 h-full p-0 font-sans`}
         >
           <div className="flex h-screen center">
-            初始数据的获取失败，请检查 API
-            服务器是否正常运行。接口请求错误信息：
+            初始資料擷取失敗，請檢查 API
+            伺服器是否正常運行。接口呼叫錯誤資訊：
             <br />
             {data.message}
           </div>

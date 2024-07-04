@@ -28,10 +28,10 @@ export const SubscribeBell: FC<SubscribeBellProps> = (props) => {
       data-hide-print
     >
       <p className="text-gray-1 leading-8 opacity-80">
-        站点已开启邮件订阅，点亮小铃铛，订阅最新文章哦~
+        本站已啟用郵件訂閱，打開小鈴鐺，訂閱最新文章哦~
       </p>
       <MotionButtonBase onClick={present}>
-        <span className="sr-only">订阅</span>
+        <span className="sr-only">訂閱</span>
         <i className="icon-[material-symbols--notifications-active-outline] mt-4 scale-150 text-3xl text-accent opacity-50 transition-opacity hover:opacity-100" />
       </MotionButtonBase>
     </div>

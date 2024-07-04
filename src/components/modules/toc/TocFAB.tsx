@@ -29,7 +29,7 @@ export const TocFAB = () => {
   }, [])
   const presentToc = useCallback(() => {
     const dispose = present({
-      title: '文章目录',
+      title: '文章目錄',
       clickOutsideToDismiss: true,
       content: () => (
         <TocTree

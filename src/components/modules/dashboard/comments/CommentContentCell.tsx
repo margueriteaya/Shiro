@@ -30,7 +30,7 @@ export const CommentContentCell: Component<{ comment: CommentModel }> = (
   const ref = ctx.refModelMap.get(id)
 
   const TitleEl = useMemo(() => {
-    if (!ref) return <span className="text-foreground/60">已删除</span>
+    if (!ref) return <span className="text-foreground/60">已刪除</span>
     if (refType === CollectionRefTypes.Recently)
       return `${ref.text.slice(0, 20)}...`
     return (
@@ -47,7 +47,7 @@ export const CommentContentCell: Component<{ comment: CommentModel }> = (
             {ref.title}
           </EllipsisHorizontalTextWithTooltip>
         </a>
-        <div className="ml-2">{isWhispers && '悄悄说'}</div>
+        <div className="ml-2">{isWhispers && '悄悄說'}</div>
         <div className="grow" />
       </div>
     )
@@ -55,7 +55,7 @@ export const CommentContentCell: Component<{ comment: CommentModel }> = (
   return (
     <div className={clsxm('flex flex-col gap-2 py-2 text-sm', className)}>
       <div className="flex gap-2 whitespace-nowrap text-sm">
-        <RelativeTime date={created} /> 于 {TitleEl}
+        <RelativeTime date={created} /> 於 {TitleEl}
       </div>
 
       <div className="break-words">
@@ -70,7 +70,7 @@ export const CommentContentCell: Component<{ comment: CommentModel }> = (
                 author={parentComment.author}
                 url={parentComment.url}
               />{' '}
-              在 <RelativeTime date={parentComment.created} /> 说：
+              在 <RelativeTime date={parentComment.created} /> 說：
             </div>
             <div className="mt-2">
               <CommentMarkdown>{parentComment.text}</CommentMarkdown>

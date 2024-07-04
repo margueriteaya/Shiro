@@ -195,18 +195,18 @@ const TimelineItem: FC<TimelineItemProps> = memo(({ type, identity }) => {
       }
     >
       {isCurrent ? (
-        <p>你在这里。</p>
+        <p>你在這裡。</p>
       ) : (
         <p>
-          读者{' '}
+          訪客{' '}
           {presence?.displayName ||
             presence?.identity.slice(0, 2).toUpperCase()}{' '}
-          在这里。
+          在這裡。
         </p>
       )}
-      <p>阅读进度 {position}%</p>
+      <p>閱覽進度 {position}%</p>
 
-      {readingDuration && <p>阅读了 {readingDuration}</p>}
+      {readingDuration && <p>閱讀了 {readingDuration}</p>}
     </FloatPopover>
   )
 })
@@ -260,7 +260,7 @@ const MoitonBar = forwardRef<
   useImperativeHandle(ref, () => elRef.current!)
   return (
     <div
-      aria-label={isCurrent ? '你在这里' : `读者在这里 - ${position}%`}
+      aria-label={isCurrent ? '你在這裡' : `訪客在這裡 - ${position}%`}
       ref={elRef}
       className={clsx(
         'absolute h-2 -translate-x-4 rounded-full bg-accent duration-200 group-hover:w-10 group-hover:opacity-80 hover:-translate-x-2 hover:opacity-100',

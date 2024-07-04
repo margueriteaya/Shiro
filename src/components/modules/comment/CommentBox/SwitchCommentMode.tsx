@@ -19,7 +19,7 @@ import {
 
 export const SwitchCommentMode = () => {
   const mode = useCommentMode()
-  const copy = `转换到${mode === CommentBoxMode.legacy ? '新' : '旧'}版评论`
+  const copy = `轉換到${mode === CommentBoxMode.legacy ? '新' : '舊'}版留言`
   const hasText = useCommentBoxHasText()
 
   const notLogged = !!useUser()

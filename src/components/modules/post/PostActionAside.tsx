@@ -192,7 +192,7 @@ const ShareButton = () => {
           })
         else {
           present({
-            title: '分享此内容',
+            title: '分享此內容',
             clickOutsideToDismiss: true,
             content: () => <ShareModal text={text} title={title} url={url} />,
           })

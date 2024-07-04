@@ -45,7 +45,7 @@ export default function Page() {
     <div>
       <header className="prose">
         <h1>思考</h1>
-        <h3>谢谢你听我诉说</h3>
+        <h3>謝謝你聽我訴說</h3>
       </header>
 
       <main className="mt-10">
@@ -90,7 +90,7 @@ const PostBox = () => {
         bordered={false}
         wrapperClassName="h-[150px] bg-gray-200/50 dark:bg-zinc-800/50"
         value={value}
-        placeholder="此刻在想什么？"
+        placeholder="此刻在想什麼？"
         onChange={(e) => {
           setValue(e.target.value)
         }}
@@ -106,7 +106,7 @@ const PostBox = () => {
             className="duration-200 disabled:cursor-not-allowed disabled:opacity-10"
           >
             <TiltedSendIcon className="size-5 text-zinc-800 dark:text-zinc-200" />
-            <span className="sr-only">发送</span>
+            <span className="sr-only">傳送</span>
           </MotionButtonBase>
         </div>
       </TextArea>
@@ -245,14 +245,14 @@ const List = () => {
                   <button
                     onClick={() => {
                       present({
-                        title: '评论',
+                        title: '留言',
                         content: () => <CommentModal {...item} />,
                       })
                     }}
                   >
                     <i className="icon-[mingcute--comment-line]" />
 
-                    <span className="sr-only">评论</span>
+                    <span className="sr-only">留言</span>
                     <span>
                       {/* @ts-expect-error */}
                       {item.comments}
@@ -265,7 +265,7 @@ const List = () => {
                     }}
                   >
                     <i className="icon-[mingcute--heart-line]" />
-                    <span className="sr-only">喜欢</span>
+                    <span className="sr-only">喜歡</span>
                     <span>{item.up}</span>
                   </button>
 
@@ -275,7 +275,7 @@ const List = () => {
                     }}
                   >
                     <i className="icon-[mingcute--heart-crack-line]" />
-                    <span className="sr-only">不喜欢</span>
+                    <span className="sr-only">不喜歡</span>
                     <span>{item.down}</span>
                   </button>
 
@@ -307,7 +307,7 @@ const DeleteButton = (props: { id: string }) => {
       .proxy(props.id)
       .delete()
       .then(() => {
-        toast.success('删除成功')
+        toast.success('刪除成功')
 
         queryClient.setQueryData<InfiniteData<RecentlyModel[]>>(
           QUERY_KEY,
@@ -333,7 +333,7 @@ const DeleteButton = (props: { id: string }) => {
       className="text-red-500 hover:text-red-600 dark:hover:text-red-300"
       onClick={() => {
         present({
-          title: '确定删除',
+          title: '確定刪除',
           content: ({ dismiss }) => (
             <div className="w-[300px] space-y-4">
               <div className="mt-4 flex justify-end space-x-4">
@@ -345,7 +345,7 @@ const DeleteButton = (props: { id: string }) => {
                   }}
                   className="bg-zinc-100/80 !text-red-500 dark:bg-neutral-900/90"
                 >
-                  确定
+                  確定
                 </StyledButton>
                 <StyledButton variant="primary" onClick={dismiss}>
                   取消
@@ -357,7 +357,7 @@ const DeleteButton = (props: { id: string }) => {
       }}
     >
       <i className="icon-[mingcute--delete-line]" />
-      <span className="sr-only">删除</span>
+      <span className="sr-only">刪除</span>
     </button>
   )
 }
@@ -367,7 +367,7 @@ const CommentModal = (props: RecentlyModel) => {
 
   return (
     <div className="max-w-[95vw] overflow-y-auto overflow-x-hidden md:w-[500px] lg:w-[600px] xl:w-[700px]">
-      <span>{allowComment && '回复：'}</span>
+      <span>{allowComment && '返信：'}</span>
 
       <Markdown className="mt-4" allowsScript>
         {content}
@@ -395,7 +395,7 @@ const RefPreview: FC<{ refModel: any }> = (props) => {
     <>
       <Divider className="my-4 w-12 bg-current opacity-50" />
       <p className="flex items-center space-x-2 opacity-80">
-        发表于： <i className="icon-[mingcute--link-3-line]" />
+        發表於： <i className="icon-[mingcute--link-3-line]" />
         <PeekLink href={url} className="shiro-link--underline">
           {title}
         </PeekLink>

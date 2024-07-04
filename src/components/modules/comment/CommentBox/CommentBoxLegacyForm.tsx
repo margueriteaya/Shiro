@@ -20,25 +20,25 @@ const taClassName =
   'relative h-[150px] w-full rounded-xl bg-gray-200/50 dark:bg-zinc-800/50'
 type FormKey = 'author' | 'mail' | 'url'
 const placeholderMap = {
-  author: '昵称',
-  mail: '邮箱',
-  url: '网址',
+  author: '昵稱',
+  mail: '',郵件
+  url: 'URL',
 } as const
 
 const validatorMap = {
   author: {
     validator: (v: string) => v.length > 0 && v.length <= 20,
-    message: '昵称长度应在 1-20 之间',
+    message: '昵稱長度應在 1-20 字元之間',
   },
   mail: {
     validator: (v: string) =>
       /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(v),
-    message: '邮箱格式不正确',
+    message: '郵件格式不正確',
   },
   url: {
     validator: (v: string) =>
       /^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/.test(v),
-    message: '网址格式不正确',
+    message: 'URL格式不正確',
   },
 }
 const FormInput = (props: { fieldKey: FormKey; required?: boolean }) => {

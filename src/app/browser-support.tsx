@@ -7,9 +7,9 @@ import { TrackerAction } from '~/constants/tracker'
 function isSupportedBrowser() {
   const ua = navigator.userAgent
   const browserRegex = /(?:Chrome|Edg|Firefox|Opera|Safari)\/(\d+)/
-  const safariRegex = /Version\/([\d.]+).*Safari/ // Safari 浏览器的版本号不同
+  const safariRegex = /Version\/([\d.]+).*Safari/ // Safari 瀏覽器的版本號不同
 
-  // 检测 Safari
+  // 檢測 Safari
   if (ua.includes('Safari') && !ua.includes('Chrome') && !ua.includes('Edg')) {
     const match = ua.match(safariRegex)
     return match && parseInt(match[1], 10) >= 16
@@ -44,7 +44,7 @@ export const BrowserSupport = () => {
           },
         }),
       )
-      alert('您的浏览器版本过低，请升级浏览器')
+      alert('您的瀏覽器版本過低，請升級瀏覽器')
     }
   }, [])
   return null

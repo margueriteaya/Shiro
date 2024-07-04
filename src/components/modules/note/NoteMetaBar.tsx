@@ -97,7 +97,7 @@ export const NoteMetaCC = () => {
           rel="noreferrer"
         >
           <span
-            title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
+            title="創用CC姓名標示-非商業性-相同方式分享 4.0 國際協定"
             className="inline-flex items-center"
           >
             <CreativeCommonsIcon />

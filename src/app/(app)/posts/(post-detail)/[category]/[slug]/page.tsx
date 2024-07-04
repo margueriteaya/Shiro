@@ -51,7 +51,7 @@ const PostPage = async ({ params }: { params: PageParams }) => {
           <SummarySwitcher data={data} />
           <PostOutdate />
 
-          <PostRelated infoText="阅读此文章之前，你可能需要首先阅读以下的文章才能更好的理解上下文。" />
+          <PostRelated infoText="閱讀此文章之前，你可能需要首先閱讀以下的文章才能更好的理解上下文。" />
         </div>
         <WrappedElementProvider eoaDetect>
           <ReadIndicatorForMobile />
@@ -75,7 +75,7 @@ const PostPage = async ({ params }: { params: PageParams }) => {
         </WrappedElementProvider>
       </div>
       <ClientOnly>
-        <PostRelated infoText="关联阅读" />
+        <PostRelated infoText="關聯閱讀" />
         <PostCopyright />
         {/* <SubscribeBell defaultType="post_c" /> */}
         <XLogInfoForPost />

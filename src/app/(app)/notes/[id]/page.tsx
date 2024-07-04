@@ -80,7 +80,7 @@ function PageInner({ data }: { data: NoteModel }) {
 
         <NoteRootBanner />
         {data.hide && (
-          <NoteBanner type="warning" message="这篇文章是非公开的，仅登录可见" />
+          <NoteBanner type="warning" message="這篇文章是非公開的，僅登入可見" />
         )}
       </div>
 

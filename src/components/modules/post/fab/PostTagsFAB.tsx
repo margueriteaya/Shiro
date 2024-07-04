@@ -22,7 +22,7 @@ export const PostTagsFAB = () => {
         present({
           content: TagsModal,
           clickOutsideToDismiss: true,
-          title: '标签云',
+          title: '標籤一覽',
           modalClassName: 'w-[900px] max-w-full',
         })
       }}

@@ -11,7 +11,7 @@ import { apiClient } from '~/lib/request'
 import { definePrerenderPage } from '~/lib/request.server'
 
 export const metadata = {
-  title: '时间线',
+  title: '時間線',
 }
 export const dynamic = 'force-dynamic'
 

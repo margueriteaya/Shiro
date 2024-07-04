@@ -38,15 +38,15 @@ export const PostsSortingFab = () => {
     () =>
       [
         {
-          label: '默认',
+          label: '預設',
           value: 'default',
         },
         {
-          label: '创建时间',
+          label: '建立時間',
           value: 'created',
         },
         {
-          label: '更新时间',
+          label: '更新時間',
           value: 'modified',
         },
       ] as SortByValues,
@@ -109,7 +109,7 @@ export const PostsSortingFab = () => {
         </section>
 
         <section className="mb-2 mt-4">
-          <div className="ml-1">顺序</div>
+          <div className="ml-1">順序</div>
           <Select<OrderBy>
             className={clsx(
               'mt-2',

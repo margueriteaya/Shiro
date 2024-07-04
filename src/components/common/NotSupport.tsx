@@ -3,7 +3,7 @@ export const NotSupport: Component<{
 }> = ({ text }) => {
   return (
     <div className="flex h-[100px] items-center justify-center text-lg font-medium">
-      {text || '您当前所在地区暂不支持此功能'}
+      {text || '您当前所在國家不支援此功能'}
     </div>
   )
 }

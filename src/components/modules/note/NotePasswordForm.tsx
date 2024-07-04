@@ -13,14 +13,14 @@ export const NotePasswordForm = () => {
   }
   return (
     <div className="flex h-[calc(100vh-15rem)] flex-col space-y-4 center">
-      需要密码才能查看！
+      此內容需要密碼
       <form className="mt-8 flex flex-col space-y-4 center">
         <Input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
-          placeholder="输入密码以查看"
-          aria-label="输入密码以查看"
+          placeholder="輸入密碼以檢視"
+          aria-label="輸入密碼以檢視"
         />
         <StyledButton
           disabled={!password}
@@ -28,7 +28,7 @@ export const NotePasswordForm = () => {
           variant="primary"
           onClick={handleSubmit}
         >
-          快给我康康！
+          檢視
         </StyledButton>
       </form>
     </div>

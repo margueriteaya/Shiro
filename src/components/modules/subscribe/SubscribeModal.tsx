@@ -22,9 +22,9 @@ interface SubscribeModalProps {
 
 const subscribeTextMap: Record<string, string> = {
   post_c: '文章',
-  note_c: '手记',
-  say_c: '说说',
-  recently_c: '速记',
+  note_c: '手記',
+  say_c: '說說',
+  recently_c: '速記',
 }
 
 const initialState = {
@@ -90,7 +90,7 @@ export const SubscribeModal: FC<SubscribeModalProps> = ({
 
   const handleSubList: React.EventHandler<any> = async (e) => {
     if (!canSub) {
-      toast.error('订阅功能暂时没有开启哦')
+      toast.error('訂閱功能尚未啟用')
       return
     }
     preventDefault(e)
@@ -101,7 +101,7 @@ export const SubscribeModal: FC<SubscribeModalProps> = ({
       Object.keys(types).filter((name) => state.types[name]) as any[],
     )
 
-    toast.success('订阅成功，谢谢你！')
+    toast.success('訂閱成功，謝謝你！')
     dispatch({ type: 'reset' })
     onConfirm()
   }
@@ -110,12 +110,12 @@ export const SubscribeModal: FC<SubscribeModalProps> = ({
   return (
     <form onSubmit={handleSubList} className="flex flex-col gap-5">
       <p className="text-gray-1 text-sm">
-        欢迎订阅「{title}
-        」，我会定期推送最新的内容到你的邮箱。
+        歡迎訂閱「{title}
+        」，我會定期傳送最新的內容到你的信箱。
       </p>
       <Input
         type="text"
-        placeholder="留下你的邮箱哦 *"
+        placeholder="留下你的信箱哦 *"
         required
         value={state.email}
         onChange={(e) => {
@@ -156,13 +156,13 @@ export const SubscribeModal: FC<SubscribeModalProps> = ({
       </div>
 
       <p className="text-gray-1 -mt-2 text-sm">
-        或者你也可以通过{' '}
+        或者你也可以透過{' '}
         <a href="/feed" className="text-green" target="_blank" rel="noreferrer">
           /feed
         </a>{' '}
-        订阅「{title}」的 RSS 流。
+        訂閱「{title}」的 RSS。
       </p>
-      <StyledButton disabled={!state.email}>订阅</StyledButton>
+      <StyledButton disabled={!state.email}>訂閱</StyledButton>
     </form>
   )
 }

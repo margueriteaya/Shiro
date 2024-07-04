@@ -22,12 +22,12 @@ export default definePrerenderPage<{ slug: string }>()({
     return (
       <BottomToUpSoftScaleTransitionView>
         <header className="prose">
-          <h1>分类 - {name}</h1>
+          <h1>分類 - {name}</h1>
 
           <h3 className="font-light">
             {children.length
-              ? `当前共有 ${children.length} 篇文章，不想写就别写了。`
-              : `这里还有没有内容，哈哈。`}
+              ? `當前共有 ${children.length} 篇文章，不想寫就別寫了。`
+              : `這裡還沒有內容，哈哈。`}
           </h3>
         </header>
 

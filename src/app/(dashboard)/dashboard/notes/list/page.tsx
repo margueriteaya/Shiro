@@ -91,9 +91,9 @@ const cardSlot: CardProps<NoteModel>['slots'] = {
             wrapperClassName="text-xs"
             as="span"
             type="tooltip"
-            triggerElement="(已编辑)"
+            triggerElement="(已變更)"
           >
-            编辑于 <RelativeTime date={data.modified} />
+            變更於 <RelativeTime date={data.modified} />
           </FloatPopover>
         )}
         {data.topic && (
@@ -111,7 +111,7 @@ const cardSlot: CardProps<NoteModel>['slots'] = {
             }
           >
             <div className="flex flex-col gap-1">
-              <div>专栏：{data.topic.name}</div>
+              <div>Channel：{data.topic.name}</div>
             </div>
           </FloatPopover>
         )}

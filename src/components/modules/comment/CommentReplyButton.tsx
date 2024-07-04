@@ -20,7 +20,7 @@ export const CommentReplyButton: FC<{
   return (
     <>
       <button
-        aria-label="回复"
+        aria-label="返信"
         className={clsx(
           'absolute bottom-0 right-0 translate-x-2/3 translate-y-1/4 text-xs',
           'aspect-square rounded-full',

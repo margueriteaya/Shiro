@@ -54,7 +54,7 @@ export const useGetCommentBoxAtomValues = () => {
 export const useCommentBoxLifeCycle = () =>
   useContext(CommentBoxLifeCycleContext)
 
-// ReactNode 导致 tsx 无法推断，过于复杂
+// ReactNode 導緻 tsx 無法推斷，過於複雜
 const commentActionLeftSlotAtom = atom(null as React.JSX.Element | null)
 export const useCommentActionLeftSlot = () =>
   useAtomValue(commentActionLeftSlotAtom)
@@ -216,10 +216,10 @@ export const useSendComment = () => {
       afterSubmit?.()
 
       const toastCopy = isLogged
-        ? '发表成功啦~'
+        ? '傳送成功啦~'
         : isReply
-          ? '感谢你的回复！'
-          : '感谢你的评论！'
+          ? '感謝你的回覆！'
+          : '感謝你的留言！'
 
       const commentListQueryKey = buildCommentsQueryKey(originalRefId)
 

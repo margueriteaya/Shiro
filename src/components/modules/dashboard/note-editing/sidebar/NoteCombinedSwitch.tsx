@@ -23,7 +23,7 @@ export const NoteCombinedSwitch = () => {
         checked={isHide}
         onCheckedChange={setIsHide}
       >
-        <span>隐藏</span>
+        <span>隱藏</span>
       </LabelSwitch>
 
       <LabelSwitch
@@ -34,14 +34,14 @@ export const NoteCombinedSwitch = () => {
           if (!checked) setPassword('')
         }}
       >
-        <span>设定密码？</span>
+        <span>設定密碼？</span>
       </LabelSwitch>
       {passwordEnable && (
         <AdvancedInput
           color="primary"
           labelPlacement="left"
           labelClassName="text-xs"
-          label="密码"
+          label="密碼"
           type="password"
           inputClassName="text-base font-medium"
           value={password}
@@ -54,7 +54,7 @@ export const NoteCombinedSwitch = () => {
         checked={allowComment}
         onCheckedChange={setAllowComment}
       >
-        <span>允许评论</span>
+        <span>允許留言</span>
       </LabelSwitch>
 
       <LabelSwitch
@@ -62,7 +62,7 @@ export const NoteCombinedSwitch = () => {
         checked={bookmark}
         onCheckedChange={setHasMemory}
       >
-        <span>标记为回忆项</span>
+        <span>標記為 Memorie</span>
       </LabelSwitch>
     </>
   )

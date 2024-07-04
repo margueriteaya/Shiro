@@ -106,7 +106,7 @@ const EditPage: FC<{
             <div />
           ) : (
             <span>
-              {props.initialData ? <>编辑「{editingData.title}」</> : '撰写'}
+              {props.initialData ? <>編輯「{editingData.title}」</> : '撰寫'}
             </span>
           )}
           <ActionButtonGroup initialData={props.initialData} />
@@ -114,7 +114,7 @@ const EditPage: FC<{
             middleSlot={NoteNid}
             titleLabel={
               created
-                ? `记录 ${created.getFullYear()} 年第 ${dayOfYear()} 天`
+                ? `記錄 ${created.getFullYear()} 年第 ${dayOfYear()} 天`
                 : undefined
             }
           />
@@ -227,7 +227,7 @@ const ActionButtonGroup = ({ initialData }: { initialData?: NoteDto }) => {
               })
           }}
         >
-          {initialData ? '保存' : '发布'}
+          {initialData ? '保存' : '傳送'}
         </StyledButton>
       </div>
     </>

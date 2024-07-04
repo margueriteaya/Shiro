@@ -54,7 +54,7 @@ const WhisperCheckbox = () => {
           setter('isWhisper', checked)
         }}
       />
-      <span className="label-text text-sm">悄悄话</span>
+      <span className="label-text text-sm">悄悄話</span>
     </label>
   )
 }
@@ -100,13 +100,13 @@ export const CommentBoxActionBar: Component = ({ className }) => {
         )}
       >
         <span className="hidden md:inline">
-          支持 <b>Markdown</b> 与{' '}
+          支援 <b>Markdown</b> 與{' '}
           <MLink href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">
             GFM
           </MLink>
-          ，评论前请参阅{' '}
+          ，留言前請參閱{' '}
           <MLink href="/privacy-policy">
-            隐私权政策
+            隱私權政策
           </MLink>
           。
         </span>

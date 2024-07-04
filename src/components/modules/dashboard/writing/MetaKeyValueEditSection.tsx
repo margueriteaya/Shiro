@@ -36,7 +36,7 @@ export const MetaKeyValueEditSection: FC<MetaKeyValueEditSectionProps> = (
   const { present } = useModalStack()
   const handlePresentModal = useEventCallback(() => {
     present({
-      title: `编辑元信息`,
+      title: `編輯元信息`,
       clickOutsideToDismiss: false,
       content: ({ dismiss }) => (
         <EditorModal
@@ -55,7 +55,7 @@ export const MetaKeyValueEditSection: FC<MetaKeyValueEditSectionProps> = (
         <Label>Meta</Label>
 
         <StyledButton variant="secondary" onClick={handlePresentModal}>
-          编辑
+          編輯
         </StyledButton>
       </div>
       <HighLighterPrismCdn key={jsonString} lang="json" content={jsonString} />
@@ -81,7 +81,7 @@ const EditorModal: FC<{
 
   const handleSave = () => {
     if (!isValidJSONString(currentEditValueRef.current)) {
-      toast.error('JSON 格式错误，请检查后再试')
+      toast.error('JSON 格式錯誤，請檢查後再試')
       return
     }
     onChange(JSON.parse(currentEditValueRef.current) as Record<string, unknown>)

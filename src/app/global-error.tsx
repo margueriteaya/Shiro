@@ -22,14 +22,14 @@ export default function GlobalError({
   return (
     <html>
       <head>
-        <title>禁止访问或者 API 服务出现问题</title>
+        <title>禁止存取或者 API 服務出現問題</title>
       </head>
       <body>
         <NormalContainer>
-          <h1 className="mb-4">禁止访问或者 API 服务出现问题</h1>
+          <h1 className="mb-4">禁止存取或者 API 服務出現問題</h1>
           <div className="flex justify-center">
             <LazyMotion features={domAnimation}>
-              <StyledButton onClick={location.reload}>重试</StyledButton>
+              <StyledButton onClick={location.reload}>重試</StyledButton>
             </LazyMotion>
           </div>
         </NormalContainer>

@@ -14,8 +14,8 @@ const ListSortAndFilterContext = createContext({
 })
 
 export const defaultSortingKeyMap = {
-  created: '创建时间',
-  modified: '修改时间',
+  created: '建立時間',
+  modified: '修改時間',
 } as Record<string, string>
 
 type SortingOrderListItem = {

@@ -14,8 +14,8 @@ export const PostOutdate = () => {
   return dayjs().diff(dayjs(time), 'day') > 60 ? (
     <Banner type="warning" className="my-10">
       <span className="leading-[1.8]">
-        这篇文章上次修改于 <RelativeTime date={time} />
-        ，可能部分内容已经不适用，如有疑问可询问作者。
+        這篇文章上次變更於 <RelativeTime date={time} />
+        ，部分內容也許已經不適用。
       </span>
     </Banner>
   ) : null

@@ -126,7 +126,7 @@ const PoweredBy: Component = ({ className }) => {
           </StyledLink>
         }
       >
-        这是{' '}
+        這是{' '}
         <StyledLink
           className="underline"
           href="https://github.com/innei/Shiro"
@@ -134,10 +134,10 @@ const PoweredBy: Component = ({ className }) => {
         >
           Shiro
         </StyledLink>{' '}
-        的开源版本。并已惨遭魔改适正用语以尽情宣泄不健全。
+        的開源版本。並已慘遭繁體中文化、魔改適正用語以盡情宣泄不健全。
         {process.env.COMMIT_HASH && process.env.COMMIT_URL && (
           <MLink popper={false} href={process.env.COMMIT_URL}>
-            版本哈希：{process.env.COMMIT_HASH.slice(0, 8)}
+            版本Hash：{process.env.COMMIT_HASH.slice(0, 8)}
           </MLink>
         )}
       </FloatPopover>
@@ -192,7 +192,7 @@ const FooterBottom = async () => {
           </a>
           <Divider />
           <a href="/sitemap.xml" target="_blank" rel="noreferrer">
-            站点地图
+            站點地圖
           </a>
           <Divider className="inline" />
 
@@ -225,7 +225,7 @@ const FooterBottom = async () => {
           <>
             <Divider />
             <span>
-              最近访客来自&nbsp;
+              最近訪客來自&nbsp;
               {lastVisitor.flag}&nbsp;
               {[lastVisitor.city, lastVisitor.country]
                 .filter(Boolean)

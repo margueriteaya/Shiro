@@ -11,7 +11,7 @@ export const NoteWeatherAndMood = () => {
   return (
     <>
       <SidebarSection
-        label="天气"
+        label="天氣"
         className="flex items-center justify-between"
       >
         <Autocomplete

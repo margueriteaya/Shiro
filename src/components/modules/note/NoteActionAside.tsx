@@ -108,7 +108,7 @@ const LikeButton = () => {
         control.start('tap', {
           repeat: 5,
         })
-        toast('谢谢你！', undefined, {
+        toast('謝謝你！', undefined, {
           iconElement: (
             <m.i
               className="icon-[mingcute--heart-fill] text-uk-red-light"
@@ -198,7 +198,7 @@ const ShareButton = () => {
           })
         else {
           present({
-            title: '分享此内容',
+            title: '分享此內容',
             clickOutsideToDismiss: true,
             content: () => <ShareModal text={text} title={title} url={url} />,
           })

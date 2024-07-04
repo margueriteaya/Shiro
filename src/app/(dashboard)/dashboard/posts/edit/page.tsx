@@ -108,7 +108,7 @@ const EditPage: FC<{
             <div />
           ) : (
             <span>
-              {props.initialData ? <>编辑「{editingData.title}」</> : '撰写'}
+              {props.initialData ? <>編輯「{editingData.title}」</> : '撰寫'}
             </span>
           )}
           <ActionButtonGroup initialData={props.initialData} />
@@ -220,7 +220,7 @@ const ActionButtonGroup = ({ initialData }: { initialData?: PostDto }) => {
             })
           }}
         >
-          {initialData ? '保存' : '发布'}
+          {initialData ? '保存' : '傳送'}
         </StyledButton>
       </div>
     </>

@@ -29,14 +29,14 @@ export default function Page() {
     () => [
       {
         key: CommentState.Unread,
-        title: '未读',
+        title: '未讀',
         component: CommentTable,
         titleComponent: UnreadTabTitle,
       },
 
       {
         key: CommentState.Read,
-        title: '已读',
+        title: '已讀',
         component: CommentTable,
       },
 
@@ -96,7 +96,7 @@ export default function Page() {
 const UnreadTabTitle: FC = () => {
   return (
     <span className="inline-block space-x-1 pb-1">
-      <span>未读</span>
+      <span>未讀</span>
     </span>
   )
 }

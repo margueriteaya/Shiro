@@ -110,7 +110,7 @@ export default function TimelinePage() {
 
   const memory = search.get('bookmark') || search.get('memory')
 
-  const title = !memory ? '时间线' : '回忆'
+  const title = !memory ? '時間線' : '回憶'
 
   const { posts = [], notes = [] } = data
   const sortedMap = new Map<number, MapType[]>()
@@ -144,8 +144,8 @@ export default function TimelinePage() {
         title: note.title,
         meta: [
           note.mood ? `心情：${note.mood}` : undefined,
-          note.weather ? `天气：${note.weather}` : undefined,
-          '手记',
+          note.weather ? `天氣：${note.weather}` : undefined,
+          '手記',
         ].filter(Boolean) as string[],
         date,
         href: `/notes/${note.nid}`,
@@ -172,7 +172,7 @@ export default function TimelinePage() {
 
   const subtitle = `共有 ${
     sortedArr.flat(2).filter((i) => typeof i === 'object').length
-  } 篇文章，${!memory ? '别往前走' : '别回头看'}`
+  } 篇文章，${!memory ? '別往前走' : '別回頭看'}`
 
   return (
     <NormalContainer>
@@ -184,7 +184,7 @@ export default function TimelinePage() {
           <>
             <Divider className="my-8 w-[80px]" />
             <TimelineProgress />
-            <p>逃离时代才是要紧事。</p>
+            <p>逃離時代才是要緊事。</p>
           </>
         )}
       </header>

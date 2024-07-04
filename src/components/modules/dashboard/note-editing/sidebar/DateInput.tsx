@@ -11,7 +11,7 @@ export const PublicAtInput = () => {
   return (
     <SidebarDateInputField
       getSet={useNoteModelSingleFieldAtom('created')}
-      label="发布于"
+      label="發佈於"
     />
   )
 }

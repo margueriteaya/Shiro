@@ -70,12 +70,12 @@ export const DataStat = () => {
     if (!stat) return []
     return [
       {
-        label: '博文',
+        label: 'Posts',
         value: stat.posts,
         icon: <CodeIcon />,
         actions: [
           {
-            name: '撰写',
+            name: '撰寫',
             primary: true,
             onClick() {
               router.push('/dashboard/posts/edit')
@@ -91,12 +91,12 @@ export const DataStat = () => {
       },
 
       {
-        label: '手记',
+        label: 'Notes',
         value: stat.notes,
         icon: <i className="icon-[mingcute--quill-pen-line]" />,
         actions: [
           {
-            name: '撰写',
+            name: '撰寫',
             primary: true,
             onClick() {
               router.push('/dashboard/notes/edit')
@@ -112,7 +112,7 @@ export const DataStat = () => {
       },
 
       {
-        label: '页面',
+        label: '頁面',
         value: stat.pages,
         icon: <i className="icon-[mingcute--file-line]" />,
         actions: [
@@ -127,7 +127,7 @@ export const DataStat = () => {
       },
 
       {
-        label: '分类',
+        label: '分類',
         value: stat.categories,
         icon: <i className="icon-[mingcute--pen-line]" />,
         actions: [
@@ -142,7 +142,7 @@ export const DataStat = () => {
       },
 
       {
-        label: '未读评论',
+        label: '未讀留言',
         value: stat.unreadComments,
         icon: <i className="icon-[mingcute--comment-line]" />,
         highlight: stat.unreadComments > 0,
@@ -158,13 +158,13 @@ export const DataStat = () => {
       },
 
       {
-        label: '缓存',
+        label: '快取',
         value: 'Redis',
         icon: <RedisIcon />,
         actions: [
           {
             primary: false,
-            name: '清除 API 缓存',
+            name: '清除 API 快取',
             onClick() {
               apiClient.proxy.clean_catch.get().then(() => {
                 toast.success('清除成功')
@@ -173,7 +173,7 @@ export const DataStat = () => {
           },
           {
             primary: false,
-            name: '清除数据缓存',
+            name: '清除資料快取',
             onClick() {
               apiClient.proxy.clean_redis.get().then(() => {
                 toast.success('清除成功')
@@ -184,45 +184,45 @@ export const DataStat = () => {
       },
 
       {
-        label: 'API 总调用次数',
+        label: 'API 總呼叫次數',
         value: stat.callTime,
         icon: <TablerActivityHeartbeat />,
       },
       {
-        label: '今日 IP 访问次数',
+        label: '今日 IP 存取次數',
         value: stat.todayIpAccessCount,
         icon: <SolarPieChartBroken />,
       },
       {
-        label: '全站字符数',
+        label: '全站字元數',
         value: siteWordCount,
         icon: <PhAlignLeft />,
       },
 
       {
-        label: '总阅读量',
+        label: '總閱讀量',
         value: readAndLikeCounts?.totalReads,
         icon: <NotebookMinimalistic />,
       },
       {
-        label: '总点赞数',
+        label: '總喜歡數',
         value: readAndLikeCounts?.totalLikes,
         icon: <IcBaselineFavoriteBorder />,
       },
 
       {
-        label: '当前在线访客',
+        label: '當前線上訪客',
         value: stat.online,
         icon: <IcSharpPeopleOutline />,
       },
       {
-        label: '今日访客',
+        label: '今日訪客',
         value: stat.todayOnlineTotal,
         icon: <FluentGuest28Filled />,
       },
       {
         value: stat.todayMaxOnline,
-        label: '今日最多同时在线人数',
+        label: '今日最多同時在線上人數',
         icon: <MingcuteGame1Line />,
       },
     ]
@@ -237,9 +237,9 @@ export const DataStat = () => {
   return (
     <div className="relative @container">
       <h3 className="mb-4 text-xl font-light text-opacity-80">
-        数据看板：
+        資料看板：
         <small className="text-sm">
-          数据更新于： <RelativeTime date={new Date(dataUpdatedAt)} />
+          資料更新於： <RelativeTime date={new Date(dataUpdatedAt)} />
         </small>
       </h3>
       <div className="grid grid-cols-1 gap-6 @[550px]:grid-cols-2 @[900px]:grid-cols-3 @[1124px]:grid-cols-4 @[1200px]:grid-cols-5">
