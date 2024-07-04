@@ -7,7 +7,7 @@ export type LoadingProps = {
   useDefaultLoadingText?: boolean
 }
 
-const defaultLoadingText = '你网似乎有点慢'
+const defaultLoadingText = '請檢查連線（壞笑）'
 export const Loading: Component<LoadingProps> = ({
   loadingText,
   className,
