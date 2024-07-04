@@ -98,7 +98,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       },
       description: seo.description,
       siteName: `${seo.title}`,
-      locale: 'zh_CN',
+      locale: 'zh_TW',
       type: 'website',
       url: url.webUrl,
       images: {
